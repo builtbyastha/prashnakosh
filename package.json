@@ -6,6 +6,6 @@
   "description": "Exam preparation and question-paper generation platform (browser build).",
   "scripts": {
     "start": "python3 -m http.server 8765",
-    "test": "node --test tests/engine.test.mjs tests/selftest.test.mjs tests/db-adapter.test.mjs"
+    "test": "node --test engine.test.mjs selftest.test.mjs db-adapter.test.mjs"
   }
 }

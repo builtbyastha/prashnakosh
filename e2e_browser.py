@@ -1,6 +1,7 @@
 import asyncio, json, re, sys
 from playwright.async_api import async_playwright, expect
-URL='http://localhost:8765/index.html'
+import os
+URL=os.environ.get('PK_URL','http://localhost:8765/index.html')
 results=[]
 def ok(name, cond, detail=''):
     results.append((name, bool(cond), detail)); print(('PASS ' if cond else 'FAIL ')+name+(' — '+str(detail) if detail else ''), flush=True)

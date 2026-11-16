@@ -1,7 +1,7 @@
 import { html, useState, useMemo, useReducer, useStore, nav, Icon, Notice, Stat, Ring, BarList, StackBar, Tabs, Chips, Empty, QuestionBody, QuestionOptions, Explanation, DiffPill, toast, attempt, fmtMarks, fmtPct, fmtDateTime, fmtDate, plural } from './core.js';
-import * as E from '../engine.js';
-import * as D from '../domain.js';
-import * as S from '../store.js';
+import * as E from './engine.js';
+import * as D from './domain.js';
+import * as S from './store.js';
 import { entitlement, launch, UpgradeHint } from './student.js';
 import { ReportModal } from './runner.js';
 import { downloadResultPdf, downloadResultCsv } from './pdf.js';

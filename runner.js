@@ -1,7 +1,7 @@
 import { html, useState, useEffect, useRef, useReducer, useStore, nav, Icon, Modal, toast, QuestionBody, QuestionOptions, Explanation, fmtMarks, plural, Field } from './core.js';
-import * as E from '../engine.js';
-import * as D from '../domain.js';
-import * as S from '../store.js';
+import * as E from './engine.js';
+import * as D from './domain.js';
+import * as S from './store.js';
 import { entitlement } from './student.js';
 
 export function Runner({ attemptId }) {

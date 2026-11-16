@@ -20,7 +20,7 @@ You can also register a new student account.
 ## Publish on GitHub Pages
 
 1. Create a new **public** repository on GitHub, for example `prashnakosh`.
-2. Upload every file and folder in this package to the repository root, keeping the folder structure (`index.html`, `css/`, `js/`, `tests/`, `.nojekyll`). On github.com: **Add file → Upload files**, drag the unzipped folder contents in, then **Commit changes**.
+2. Upload every file in this package to the repository root. All files sit in one folder, so there is no folder structure to keep. On github.com: **Add file → Upload files**, select all the unzipped files, drag them in, then **Commit changes**.
 3. Go to **Settings → Pages**. Under **Build and deployment**, set **Source** to *Deploy from a branch*, choose branch `main` and folder `/ (root)`, then **Save**.
 4. After a minute or two the site is live at `https://<your-username>.github.io/prashnakosh/`. Share that link.
 
@@ -45,8 +45,8 @@ Everything except **AI drafting** and the AI helpers in the question editor (exp
 ## Tests
 
 ```
-npm test                      # engine, scoring, generation, storage (Node 20+)
-python3 tests/e2e_browser.py  # browser journeys; needs Playwright and a local server on :8765
+npm test                  # engine, scoring, generation, storage (Node 20+)
+python3 e2e_browser.py    # browser journeys; needs Playwright and a local server on :8765 (or set PK_URL)
 ```
 
 ## Limits of this build
@@ -59,15 +59,17 @@ python3 tests/e2e_browser.py  # browser journeys; needs Playwright and a local s
 
 ## Structure
 
+All files live in one folder so the site works however it is uploaded.
+
 ```
-index.html            app shell
-css/app.css           design tokens and styles (light and dark)
-js/engine.js          paper generation, scoring, validation, analytics, entitlements (pure, tested)
-js/domain.js          workspace-level helpers (blueprint → paper spec, readiness)
-js/seed*.js           sample exams, taxonomy and questions
-js/store.js           state, storage adapters, permission-checked actions, audit log
-js/selftest.js        in-app system checks
-js/ui/                Preact + htm views (student, exam runner, results, admin console)
-js/vendor/            Preact 10 + htm standalone bundle
-tests/                Node and browser tests
+index.html, app.css       app shell and styles (light and dark)
+engine.js                 paper generation, scoring, validation, analytics, entitlements (pure, tested)
+domain.js                 workspace-level helpers (blueprint → paper spec, readiness)
+seed.js, seed-questions.js  sample exams, taxonomy and questions
+store.js                  state, storage adapters, permission-checked actions, audit log
+selftest.js               in-app system checks
+app.js, core.js, auth.js, student.js, runner.js, results.js, pdf.js,
+admin.js, admin-content.js, admin-exams.js   Preact + htm views
+preact-htm.js             Preact 10 + htm standalone bundle
+*.test.mjs, e2e_browser.py  tests
 ```

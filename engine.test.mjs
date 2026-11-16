@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import * as E from '../js/engine.js';
+import * as E from './engine.js';
 
 // Synthetic bank: 3 topics × 4 difficulties
 function makePool({ perCell = { easy: 10, moderate: 15, difficult: 6, advanced: 2 }, topics = ['t1', 't2', 't3'], status = 'published' } = {}) {

@@ -1,6 +1,6 @@
-import { html, render, useState, useEffect, useRef, useMemo, useCallback, useReducer } from '../vendor/preact-htm.js';
-import * as E from '../engine.js';
-import { store, subscribe } from '../store.js';
+import { html, render, useState, useEffect, useRef, useMemo, useCallback, useReducer } from './preact-htm.js';
+import * as E from './engine.js';
+import { store, subscribe } from './store.js';
 export { html, render, useState, useEffect, useRef, useMemo, useCallback, useReducer };
 
 // ---------- store hook ----------

@@ -1,5 +1,5 @@
 import { html, useState, useStore, Field, Tabs, Notice, initials, nav, Icon } from './core.js';
-import * as S from '../store.js';
+import * as S from './store.js';
 
 const DEMO_LABEL = { admin: 'Administrator: exams, blueprints, users, analytics', reviewer: 'Content reviewer: review queue, imports, AI drafts', student: 'Student' };
 

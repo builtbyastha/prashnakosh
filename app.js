@@ -1,5 +1,5 @@
 import { html, render, useState, useEffect, useStore, useRoute, nav, Icon, Toasts, initials, toast, attempt, Modal } from './core.js';
-import * as S from '../store.js';
+import * as S from './store.js';
 import { Auth } from './auth.js';
 import { StudentHome, PracticeView, CreateView, SimulatorView, TestsView, RevisionView, PlansView, ProfileView } from './student.js';
 import { Runner } from './runner.js';

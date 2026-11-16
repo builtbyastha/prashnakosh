@@ -1,7 +1,7 @@
 import { html, useState, useMemo, useEffect, useStore, nav, Icon, Notice, Empty, Tabs, Modal, Field, StatusPill, DiffPill, Pager, Chips, toast, attempt, fmtDate, timeAgo, plural, useConfirm, QuestionBody, QuestionOptions, Explanation } from './core.js';
-import * as E from '../engine.js';
-import * as D from '../domain.js';
-import * as S from '../store.js';
+import * as E from './engine.js';
+import * as D from './domain.js';
+import * as S from './store.js';
 import { saveFile } from './pdf.js';
 
 const isAdmin = () => S.store.user.role === 'admin';

@@ -1,8 +1,8 @@
 import { html, useState, useMemo, useStore, nav, Icon, Notice, Stat, Empty, Tabs, BarList, Columns, Modal, Field, StatusPill, Pager, toast, attempt, fmtDate, fmtDateTime, fmtShort, fmtPct, fmtINR, timeAgo, plural, initials, useConfirm, DiffPill } from './core.js';
-import * as E from '../engine.js';
-import * as D from '../domain.js';
-import * as S from '../store.js';
-import { runSelfTests } from '../selftest.js';
+import * as E from './engine.js';
+import * as D from './domain.js';
+import * as S from './store.js';
+import { runSelfTests } from './selftest.js';
 
 // ---------- Control centre ----------
 export function AdminOverview() {

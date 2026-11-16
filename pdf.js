@@ -1,7 +1,7 @@
 // PDF and CSV exports. jsPDF is loaded on demand from cdnjs.
-import * as E from '../engine.js';
-import * as D from '../domain.js';
-import { store } from '../store.js';
+import * as E from './engine.js';
+import * as D from './domain.js';
+import { store } from './store.js';
 import { toast } from './core.js';
 
 let jsPdfPromise = null;

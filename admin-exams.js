@@ -1,8 +1,8 @@
 import { html, useState, useMemo, useStore, nav, Icon, Notice, Empty, Tabs, Modal, Field, Chips, Pager, toast, attempt, fmtDate, fmtDateTime, fmtMarks, timeAgo, plural, useConfirm, QuestionBody, QuestionOptions, DiffPill } from './core.js';
-import * as E from '../engine.js';
-import * as D from '../domain.js';
+import * as E from './engine.js';
+import * as D from './domain.js';
 const readinessKey = (ws) => ws.exams.map((e) => e.patterns.map((p) => p.id + ':' + p.currentV + ':' + p.versions.length).join(',')).join('|') + '#' + ws.questions.filter((q) => q.status === 'published').length + ':' + ws.questions.length + ':' + ws.topics.filter((t) => t.archived).length;
-import * as S from '../store.js';
+import * as S from './store.js';
 import { downloadPaperPdf } from './pdf.js';
 
 // ---------- Exams & blueprints ----------

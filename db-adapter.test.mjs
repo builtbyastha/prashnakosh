@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { DbAdapter } from '../js/store.js';
+import { DbAdapter } from './store.js';
 
 // Minimal in-memory stand-in for the artifact db capability (paths, set/get/delete, collection get).
 function fakeDb() {

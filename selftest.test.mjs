@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { buildDemoWorkspace } from '../js/seed.js';
-import { runSelfTests } from '../js/selftest.js';
-import * as E from '../js/engine.js';
-import * as D from '../js/domain.js';
+import { buildDemoWorkspace } from './seed.js';
+import { runSelfTests } from './selftest.js';
+import * as E from './engine.js';
+import * as D from './domain.js';
 
 const ws = await buildDemoWorkspace(async (p) => ({ hash: 'h' + p, salt: 's' }));
 
